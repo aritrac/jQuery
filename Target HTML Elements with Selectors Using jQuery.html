@@ -1,14 +1,15 @@
 <!--
-First, add a script element at the top of your page. Be sure to close it on the following line.
-Your browser will run any JavaScript inside a script element, including jQuery.
-Inside your script element, add this code: $(document).ready(function() { to your script. Then close it on the following line (still inside your script element) with: });
-We'll learn more about functions later. The important thing to know is that code you put inside this function will run as soon as your browser has loaded your page.
-This is important because without your document ready function, your code may run before your HTML is rendered, which would cause bugs.
+jQuery often selects an HTML element with a selector, then does something to that element.
+For example, let's make all of your button elements bounce. Just add this code inside your document ready function:
+$("button").addClass("animated bounce");
+Note that we've already included both the jQuery library and the Animate.css library in the background so that you can use them 
+in the editor. So you are using jQuery to apply the Animate.css bounce class to your button elements.
+Additionally make sure to use $("button").addClass("animated bounce"); instead of $('button').addClass("animated bounce"); 
+since single-quote selectors will not pass our tests.
 
-TESTING:
-Create a script element making sure it is valid and has a closing tag.
-You should add $(document).ready(function() { to the beginning of your script element.
-Close your $(document).ready(function() { function with });
+TESTS
+Use the jQuery addClass() function to give the classes animated and bounce to your button elements.
+Only use jQuery to add these classes to the element.
 -->
 <html>
     <head>
@@ -16,7 +17,9 @@ Close your $(document).ready(function() { function with });
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script>
-            $(document).ready(function(){});
+            $(document).ready(function() {
+            $("button").addClass("animated bounce");
+            });
         </script>
     </head>
 <!-- Only change code above this line. -->

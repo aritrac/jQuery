@@ -1,0 +1,48 @@
+<!--
+You can also target all the even-numbered elements.
+Here's how you would target all the odd-numbered elements with class target and give them classes:
+$(".target:odd").addClass("animated shake");
+Note that jQuery is zero-indexed, meaning that, counter-intuitively, :odd selects the second element, fourth element, and so on.
+Try selecting all the even-numbered elements and giving them the classes of animated and shake.
+
+TESTS
+All the target elements that computer considers even should shake.
+You should use the :even function to modify these elements.
+Only use jQuery to add these classes to the element.
+-->
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script>
+            $(document).ready(function() {
+                $(".target:even").addClass("animated shake");
+            });
+        </script>
+    </head>
+<!-- Only change code above this line. -->
+<body>
+<div class="container-fluid">
+  <h3 class="text-primary text-center">jQuery Playground</h3>
+  <div class="row">
+    <div class="col-xs-6">
+      <h4>#left-well</h4>
+      <div class="well" id="left-well">
+        <button class="btn btn-default target" id="target1">#target1</button>
+        <button class="btn btn-default target" id="target2">#target2</button>
+        <button class="btn btn-default target" id="target3">#target3</button>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <h4>#right-well</h4>
+      <div class="well" id="right-well">
+        <button class="btn btn-default target" id="target4">#target4</button>
+        <button class="btn btn-default target" id="target5">#target5</button>
+        <button class="btn btn-default target" id="target6">#target6</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!--
+Many HTML elements have children which inherit their properties from their parent HTML elements.
+For example, every HTML element is a child of your body element, and your "jQuery Playground" h3 element is a child of your <div class="container-fluid"> element.
+jQuery has a function called children() that allows you to access the children of whichever element you've selected.
+Here's an example of how you would use the children() function to give the children of your left-well element the color of blue:
+$("#left-well").children().css("color", "blue")
+Give all the children of your #right-well element a color of orange.
+
+TESTS
+All children of #right-well should have orange text.
+You should use the children() function to modify these elements.
+Only use jQuery to add these classes to the element.
+-->
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script>
+            $(document).ready(function() {
+                $("#right-well").children().css("color","orange");
+            });
+        </script>
+    </head>
+<!-- Only change code above this line. -->
+<body>
+<div class="container-fluid">
+  <h3 class="text-primary text-center">jQuery Playground</h3>
+  <div class="row">
+    <div class="col-xs-6">
+      <h4>#left-well</h4>
+      <div class="well" id="left-well">
+        <button class="btn btn-default target" id="target1">#target1</button>
+        <button class="btn btn-default target" id="target2">#target2</button>
+        <button class="btn btn-default target" id="target3">#target3</button>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <h4>#right-well</h4>
+      <div class="well" id="right-well">
+        <button class="btn btn-default target" id="target4">#target4</button>
+        <button class="btn btn-default target" id="target5">#target5</button>
+        <button class="btn btn-default target" id="target6">#target6</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
